@@ -1,0 +1,14 @@
+numpy
+matplotlib
+seaborn
+json
+sklearn
+pandas
+os
+cv2
+pickle
+streamlit
+mpl_toolkits
+opendatasets
+fastai
+tensorflow
