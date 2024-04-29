@@ -1,10 +1,35 @@
+import subprocess
+
+def install_packages(requirements_file):
+    # Read the requirements from the file
+    with open(requirements_file, 'r') as file:
+        requirements = file.readlines()
+
+    # Install each package if not already installed
+    for req in requirements:
+        package = req.strip()  # Remove leading/trailing whitespace
+        try:
+            # Check if the package is installed
+            subprocess.check_output(['pip', 'show', package])
+            print(f"{package} is already installed")
+        except subprocess.CalledProcessError:
+            # If the package is not installed, install it
+            print(f"Installing {package}...")
+            subprocess.check_call(['pip', 'install', package])
+            print(f"{package} installed successfully")
+
+if __name__ == "__main__":
+    requirements_file = 'requirements.txt'
+    install_packages(requirements_file)
+
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.model_selection import GridSearchCV
+import pandas as pd
 # Define the parameter grid to search
-def model_running(new_df,gender_no,cloth,apparel_type,body_type_number,season_number,occasion_no):
+def model_running(new_ds,gender_no,cloth,apparel_type,body_type_number,season_number,occasion_number):
   param_grid = {
       'n_estimators': [50, 100, 150],
       'max_depth': [None, 10, 20],
@@ -232,4 +257,4 @@ def model_running(new_df,gender_no,cloth,apparel_type,body_type_number,season_nu
       if value == neckline:
           print('Neckline:',key)
           Neckline=key
-  return type1,fit,pattern,material,neckline
+  return type1,fit,pattern,material,Neckline
