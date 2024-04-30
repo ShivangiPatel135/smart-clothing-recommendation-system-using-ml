@@ -1,7 +1,7 @@
 numpy
 matplotlib
 seaborn
-sklearn
+scikit-learn
 pandas
 os
 cv2
