@@ -6,4 +6,4 @@ pandas
 streamlit
 fastai
 tensorflow
-
+beautifulsoup4
