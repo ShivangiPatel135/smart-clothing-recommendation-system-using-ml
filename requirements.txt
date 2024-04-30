@@ -11,3 +11,5 @@ mpl_toolkits
 opendatasets
 fastai
 tensorflow
+streamlit
+
