@@ -3,12 +3,7 @@ matplotlib
 seaborn
 scikit-learn
 pandas
-os
-cv2
-pickle
 streamlit
-mpl_toolkits
-opendatasets
 fastai
 tensorflow
 
