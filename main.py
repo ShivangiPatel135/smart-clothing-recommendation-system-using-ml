@@ -122,7 +122,7 @@ from model import model_running
 if submit_button:
 
   
-  type1,fit,pattern,material,Neckline=model_running(new_ds,gender_no,cloth,apparel_type,body_type_number,season_number,occasion_number)
+  type1,fit,pattern,material,Neckline=model(new_ds,gender_no,cloth,apparel_type,body_type_number,season_number,occasion_number)
   # prompt: from label_mappings.json print key where value ==predicted_type
 
 
