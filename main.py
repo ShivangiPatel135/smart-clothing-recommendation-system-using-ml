@@ -4,7 +4,7 @@ df = pd.read_csv('fashion_again_.csv')
 ds=pd.read_csv('label_encoded_dataset.csv')
 import streamlit as st
 st.title("Smart Clothing Recommendation System")
-# prompt: INPUT gender and apparel typ
+# INPUT gender and apparel typ
 gender = st.selectbox("Select Gender", ["Male", "Female"])
 if gender=="Male":
   gender="Men's"
